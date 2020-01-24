@@ -1,6 +1,6 @@
 <template>
     <form class="add-new-task-form" @submit.prevent="addTask()">
-        <textarea class="add-new-task-form__field" placeholder="Введите заголовок задачи..." v-model="newTaskTitle"></textarea>
+        <textarea class="add-new-task-form__field" placeholder="Введите заголовок задачи..." v-model.trim="newTaskTitle" required></textarea>
         <button class="add-new-task-form__btn" type="submit">Add task</button>
     </form>
 </template>
