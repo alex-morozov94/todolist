@@ -1,0 +1,44 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+
+  &__list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item{
+    padding: 10px 15px;
+    line-height: 1;
+    cursor: pointer;
+    border: 1px solid #999;
+    border-right: none;
+    background-color: #fff;
+    &.is-active{
+      background-color: #7CA65C;
+      color: #fff;
+      pointer-events: none;
+    }
+    &:first-child{
+      border-left: none;
+    }
+  }
+
+  &__btn{
+    padding: 10px 15px;
+    border: 1px solid #999;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  &__btn-prev{
+    border-radius: 4px 0 0 4px;
+  }
+
+  &__btn-next{
+    border-radius: 0 4px 4px 0;
+  }
+
+}
