@@ -27,32 +27,19 @@
         methods: {
             nextPage(){
                 const _this = this;
-                this.$store.commit("loaderToggle", true)
                 let page = this.$store.state.pagination.page;
                 page++;
-                setTimeout(function () {
-//                    отложить смену страницы для показа лоадера
-                    _this.$store.commit("changePaginationPage", page)
-                    _this.$store.commit("loaderToggle", false)
-                }, 500  )
+                _this.$store.commit("changePaginationPage", page)
             },
             prevPage(){
                 const _this = this;
-                this.$store.commit("loaderToggle", true)
                 let page = this.$store.state.pagination.page;
                 page--;
-                setTimeout(function () {
-                    _this.$store.commit("changePaginationPage", page)
-                    _this.$store.commit("loaderToggle", false)
-                }, 500  )
+                _this.$store.commit("changePaginationPage", page)
             },
             numberPage(index){
                 const _this = this;
-                this.$store.commit("loaderToggle", true)
-                setTimeout(function () {
-                    _this.$store.commit("changePaginationPage", index)
-                    _this.$store.commit("loaderToggle", false)
-                }, 500  )
+                _this.$store.commit("changePaginationPage", index)
             },
             paginatedData(){
                 const start = this.pageNumber * this.size,
